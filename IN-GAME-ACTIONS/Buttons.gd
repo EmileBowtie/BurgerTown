@@ -16,15 +16,7 @@ var BL_5_MADE = false
 var BL_6_MADE = false
 
 func _ready():
-	Global.connect("bell_ringed",self,"bl_reset")
-
-func bl_reset():
-	BL_1_MADE = false
-	BL_2_MADE = false
-	BL_3_MADE= false
-	BL_4_MADE = false
-	BL_5_MADE = false
-	BL_6_MADE = false
+	pass 
 
 func _on_BunButton_pressed():
 	if !BL_1_MADE:
