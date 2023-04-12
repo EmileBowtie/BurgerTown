@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Bun-button(b).png" type="Texture" id=2]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Tomato-button(b).png" type="Texture" id=3]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Onion-button(b).png" type="Texture" id=4]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Pickle-button(b).png" type="Texture" id=5]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Cheese-button(b).png" type="Texture" id=6]
+[ext_resource path="res://FastFoodEmUp-Assets/Buttons/Patty-button(b).png" type="Texture" id=7]
+[ext_resource path="res://IN-GAME-ACTIONS/Buttons.gd" type="Script" id=8]
+[ext_resource path="res://FastFoodEmUp-Assets/Ingredients/Bottom-Bun(b).png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "BunButton-Pressed"
+length = 0.1
+
+[node name="Buttons" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="BunButton" type="TextureButton" parent="."]
+margin_left = 60.0
+margin_top = 1080.0
+margin_right = 240.0
+margin_bottom = 1170.0
+texture_normal = ExtResource( 2 )
+
+[node name="PattyButton" type="TextureButton" parent="."]
+margin_left = 270.0
+margin_top = 1080.0
+margin_right = 450.0
+margin_bottom = 1170.0
+texture_normal = ExtResource( 7 )
+
+[node name="CheeseButton" type="TextureButton" parent="."]
+margin_left = 480.0
+margin_top = 1080.0
+margin_right = 660.0
+margin_bottom = 1170.0
+texture_normal = ExtResource( 6 )
+
+[node name="PickleButton" type="TextureButton" parent="."]
+margin_left = 60.0
+margin_top = 1190.0
+margin_right = 240.0
+margin_bottom = 1280.0
+texture_normal = ExtResource( 5 )
+
+[node name="TomatoButton" type="TextureButton" parent="."]
+margin_left = 270.0
+margin_top = 1190.0
+margin_right = 450.0
+margin_bottom = 1280.0
+texture_normal = ExtResource( 3 )
+
+[node name="OnionButton" type="TextureButton" parent="."]
+margin_left = 480.0
+margin_top = 1190.0
+margin_right = 660.0
+margin_bottom = 1280.0
+texture_normal = ExtResource( 4 )
+
+[node name="Bottom-Bun(b)" type="Sprite" parent="."]
+visible = false
+position = Vector2( 215, 916 )
+texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BunButton-Pressed = SubResource( 1 )
+
+[connection signal="pressed" from="BunButton" to="." method="_on_BunButton_pressed"]
+[connection signal="pressed" from="PattyButton" to="." method="_on_PattyButton_pressed"]
+[connection signal="pressed" from="CheeseButton" to="." method="_on_CheeseButton_pressed"]
+[connection signal="pressed" from="PickleButton" to="." method="_on_PickleButton_pressed"]
+[connection signal="pressed" from="TomatoButton" to="." method="_on_TomatoButton_pressed"]
+[connection signal="pressed" from="OnionButton" to="." method="_on_OnionButton_pressed"]
