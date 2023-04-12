@@ -138,6 +138,16 @@ func order_creation():
 		Global.OL6_NUMBER = 6
 		add_child(Order_Layer_6)
 		OL6_MADE = true
+	reset_order()
+	pass
+
+func reset_order():
+	OL1_MADE = false
+	OL2_MADE = false
+	OL3_MADE = false
+	OL4_MADE = false
+	OL5_MADE = false
+	OL6_MADE = false
 	pass
 
 func _on_AnimationPlayer_animation_finished(anim_name):
